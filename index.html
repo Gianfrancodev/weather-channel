@@ -11,23 +11,27 @@
     </header>
 
     <main>
-        <form id="search-form">
-            <label for="city-input">Enter City:</label>
-            <input type="text" id="city-input" placeholder="City Name" required>
-            <button type="submit">Search</button>
-        </form>
+        <section class="search-area col-lg-1">
+            <div class="">
+                <h2>Search for a City:</h2>
+            </div>
+            <input id="search" type="text" class="form-control" placeholder="Salt Lake City" aria-describedby="inputGroup-sizing-sm" value="" onchange="searchHistory() , openPage()">
+          <button id="searchButton"  type="button" class="btn btn-primary w-100">Search</button>
+            <!-- Empty div to add searched criteria -->
+             <div id="history"></div> 
+        </section>
 
         <section id="current-weather">
-            <!-- Display current weather information here -->
+            <h2 id="currentDate"></h2>
+            <div id="0">
+                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather">
+                  <h5 id="currentTemp">temp:</h5>
+                  <h5 id="currentWind">wind:</h5>
+                  <h5 id="currentHum">humidity:</h5>
+              </div>
         </section>
 
-        <section id="forecast">
-            <!-- Display 5-day forecast here -->
-        </section>
-
-        <section id="search-history">
-            <!-- Display search history here -->
-        </section>
+        
     </main>
 
     <script src="script.js"></script>
