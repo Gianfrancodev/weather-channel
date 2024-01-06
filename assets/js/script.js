@@ -28,8 +28,8 @@ function getCurrentWeather() {
         console.log(data)
         $("#currentDate").text(data.name + " (Today)")
         $("#currentTemp").text("temp:" + data.main.temp + "°F")
-        $("#currentWind").text("wind:" + data.wind.speed)
-        $("#currentHum").text("humidity:" + data.main.humidity)
+        $("#currentWind").text("wind:" + data.wind.speed + "MPH")
+        $("#currentHum").text("humidity:" + data.main.humidity + "%")
     })
 
 
@@ -54,8 +54,8 @@ function getFutureWeather() {
         document.getElementById(`date${i+1}`).innerHTML = `Date ${day.dt_txt}`
         document.getElementById(`date${i+1}`).innerHTML = `Date ${day.dt_txt}`
         document.getElementById(`temp${i+1}`).innerHTML = `temp ${day.main.temp} °F`
-        document.getElementById(`wind${i+1}`).innerHTML = `wind ${day.wind.speed}`
-        document.getElementById(`hum${i+1}`).innerHTML = `hum ${day.main.humidity}`
+        document.getElementById(`wind${i+1}`).innerHTML = `wind ${day.wind.speed} MPH`
+        document.getElementById(`hum${i+1}`).innerHTML = `hum ${day.main.humidity} %`
     
     }
       
