@@ -1,5 +1,25 @@
 // api Key a1d03ba316ac66bfc535b4a02831697f
-const apiUrl = 
+
+function openPage() {
+    var x =document.getElementById("search").ariaValueMax;
+
+    if (x === "city") {
+        window.open("/index.html");
+    } else {
+        console.error();
+    }
+}
+
+function searchHistory() {
+    var recentSearch = []
+    recentSearch.push($('#search').val());
+
+    $.each(recentSearch, function(index, value) {
+        const p = document.createElement("p")
+        p.innerHTML = value;
+        document.getElementById("history").appendChild(p);
+    })
+}
 
 function getCurrentWeather() {
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+$('#search').val()+"&appid=a1d03ba316ac66bfc535b4a02831697f&units=imperial")
@@ -41,3 +61,7 @@ function getFutureWeather() {
       
     })
 }
+
+
+$("#searchButton").on("click", getFutureWeather)
+$("#searchButton").on("click", getCurrentWeather)
