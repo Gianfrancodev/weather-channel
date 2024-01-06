@@ -9,7 +9,6 @@ body {
 
 #header-1 {
     background-color: #3498db;
-    color: white;
     text-align: center;
     padding: 10px;
 }
@@ -41,6 +40,7 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
 #history {
 text-align: center;
 width: 100%;
@@ -66,13 +66,27 @@ section {
     margin-bottom: 20px;
 }
 
-#forecast {
+.current-weather {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    border: 2px black;
+    width: 70%;
+    margin-left: 30%;
+}
+
+.current-weather>img {
+    height: 7px;
+}
+
+.future-forecast {
+    width: 75%;
+    height: 35rem;
+    margin-left: 30%;
+    place-items: start;
 }
 
 .card {
-    border: 1px solid #ddd;
+    border: 2px solid;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
