@@ -4,7 +4,7 @@ function openPage() {
     var x =document.getElementById("search").ariaValueMax;
 
     if (x === "city") {
-        window.open("/index.html");
+        window.open("./index.html");
     } else {
         console.error();
     }
@@ -62,6 +62,5 @@ function getFutureWeather() {
     })
 }
 
-
 $("#searchButton").on("click", getFutureWeather)
-$("#searchButton").on("click", getCurrentWeather)
+ $("#searchButton").on("click", getCurrentWeather)

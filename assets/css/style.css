@@ -11,7 +11,7 @@ body {
     background-color: #3498db;
 }
 
-.search-bar {
+.search-area {
     width: 25%;
     height: 50rem;
     display: flex;
@@ -43,9 +43,9 @@ margin-inline-end: inherit;
 
 #history>p {
     border: 2px solid black;
-    background-color: rgb(233, 232, 232);
-    color: rgb(148, 227, 237);
-    opacity: 55%;
+    background-color: grey;
+    color: black;
+    opacity: 65%;
     margin-top: 10px;
     border-radius: 5px;
     font-size: medium;
@@ -55,9 +55,10 @@ margin-inline-end: inherit;
 .current-weather {
     display: flex;
     flex-direction: column;
-    border: 2px black;
+    border: 2px solid black;
     width: 70%;
-    margin-left: 27%;
+    margin-left: 28%;
+    place-items: start;
 }
 
 .current-weather>img {
@@ -67,7 +68,7 @@ margin-inline-end: inherit;
 .future-forecast {
     width: 75%;
     height: 35rem;
-    margin-left: 30%;
+    margin-left: 28%;
     place-items: start;
 }
 
